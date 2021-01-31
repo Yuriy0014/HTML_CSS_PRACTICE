@@ -29,3 +29,14 @@ label {
 	border:2px solid #03A63E;
 	margin-left: -20px;
 }
+
+.check-box:checked + .check-style::before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: #03A63E;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
