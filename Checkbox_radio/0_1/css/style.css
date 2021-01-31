@@ -44,3 +44,7 @@ label {
 .check-box:disabled + .check-style {
 	border-color: #cccccc;
 }
+
+.check-box:disabled:checked + .check-style::before {
+	background-color: #cccccc;
+}
