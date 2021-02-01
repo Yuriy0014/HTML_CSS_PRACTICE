@@ -24,7 +24,8 @@ label {
 	min-width: 50%;
 }
 
-.check-box {
+.check-box,
+.radio {
 	position: absolute;
 	height: 1px;
 	width: 1px;
@@ -32,7 +33,8 @@ label {
 	clip: rect(0 0 0 0);
 }
 
-.check-style {
+.check-style,
+.radio-style {
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -40,7 +42,8 @@ label {
 	margin-left: -20px;
 }
 
-.check-box:checked + .check-style::before {
+.check-box:checked + .check-style::before, 
+.radio:checked + .radio-style::before{
 	content: "";
 	position: absolute;
 	width: 8px;
@@ -51,15 +54,18 @@ label {
 	transform: translate(-50%, -50%);
 }
 
-.check-box:disabled + .check-style {
+.check-box:disabled + .check-style,
+.radio:disabled + .radio-style {
 	border-color: #cccccc;
 }
 
-.check-box:disabled:checked + .check-style::before {
+.check-box:disabled:checked + .check-style::before,
+.radio:disabled:checked + .radio-style::before {
 	background-color: #cccccc;
 }
 
-.check-box:focus + .check-style {
+.check-box:focus + .check-style,
+.radio:focus + .radio-style {
 	box-shadow: 0 0 0 2px #000;
 }
 
@@ -75,4 +81,12 @@ label {
 
 .check-box--version-2:checked:disabled + .check-style {
 	background-image: url("../images/check-disabled.svg");
+}
+
+.radio-style {
+	border-radius: 50%;
+}
+
+.radio:checked + .radio-style::before{
+	border-radius: 50%;
 }
