@@ -22,6 +22,7 @@ label {
 
 .version {
 	min-width: 50%;
+	margin-top: 30px;
 }
 
 .check-box,
@@ -42,8 +43,8 @@ label {
 	margin-left: -20px;
 }
 
-.check-box:checked + .check-style::before, 
-.radio:checked + .radio-style::before{
+.check-box:checked + .check-style::before,
+.radio:checked + .radio-style::before {
 	content: "";
 	position: absolute;
 	width: 8px;
@@ -87,6 +88,6 @@ label {
 	border-radius: 50%;
 }
 
-.radio:checked + .radio-style::before{
+.radio:checked + .radio-style::before {
 	border-radius: 50%;
 }
