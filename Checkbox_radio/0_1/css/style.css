@@ -13,6 +13,11 @@ label {
 	display: block;
 }
 
+.container {
+	display: flex;
+	justify-content: space-around;
+}
+
 
 .check-box {
 	position: absolute;
