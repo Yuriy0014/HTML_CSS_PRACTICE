@@ -1,0 +1,54 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+body {
+	font: 16px/1.6 "Open Sans", sans-serif;
+	padding: 30px;
+}
+
+label {
+	display: inline-block;
+	width: 20%;
+	background: #fff;
+	padding: 10px 15px;
+	border: 1px solid #bbb;
+}
+
+label > input {
+	display: none;
+}
+label .check-style {
+	display: inline-block;
+	float: right;
+	padding: 2px;
+	width: 40px;
+	height: 20px;
+	border-radius: 13px;
+	vertical-align: middle;
+	transition: 0.25s 0.09s;
+	position: relative;
+	background: #d8d9db;
+	box-sizing: initial;
+}
+label .check-style:after {
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	left: 2px;
+	transition: 0.25s;
+}
+label > input:checked + .check-style {
+	background: #4bd865;
+}
+label > input:checked + .check-style:after {
+	transform: translateX(20px);
+}
+label:hover {
+	cursor: pointer;
+}
