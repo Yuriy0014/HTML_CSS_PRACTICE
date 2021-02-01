@@ -16,10 +16,14 @@ label {
 	border: 1px solid #bbb;
 }
 
-label > input {
-	display: none;
+.check-box {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
 }
-label .check-style {
+.check-style {
 	display: inline-block;
 	float: right;
 	padding: 2px;
@@ -32,7 +36,7 @@ label .check-style {
 	background: #d8d9db;
 	box-sizing: initial;
 }
-label .check-style:after {
+.check-style:after {
 	content: " ";
 	display: block;
 	width: 20px;
@@ -43,12 +47,10 @@ label .check-style:after {
 	left: 2px;
 	transition: 0.25s;
 }
-label > input:checked + .check-style {
+.check-box:checked + .check-style {
 	background: #4bd865;
 }
-label > input:checked + .check-style:after {
+.check-box:checked + .check-style:after {
 	transform: translateX(20px);
 }
-label:hover {
-	cursor: pointer;
-}
+
