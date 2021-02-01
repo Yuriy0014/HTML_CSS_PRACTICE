@@ -14,10 +14,15 @@ label {
 }
 
 .container {
+	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
+.version {
+	min-width: 50%;
+}
 
 .check-box {
 	position: absolute;
@@ -31,7 +36,7 @@ label {
 	position: absolute;
 	width: 16px;
 	height: 16px;
-	border:2px solid #03A63E;
+	border: 2px solid #03a63e;
 	margin-left: -20px;
 }
 
@@ -40,8 +45,8 @@ label {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background-color: #03A63E;
-	top:50%;
+	background-color: #03a63e;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -56,4 +61,18 @@ label {
 
 .check-box:focus + .check-style {
 	box-shadow: 0 0 0 2px #000;
+}
+
+.check-box--version-2 + .check-style::before {
+	display: none;
+}
+
+.check-box--version-2:checked + .check-style {
+	background-image: url("../images/check-on.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.check-box--version-2:checked:disabled + .check-style {
+	background-image: url("../images/check-disabled.svg");
 }
