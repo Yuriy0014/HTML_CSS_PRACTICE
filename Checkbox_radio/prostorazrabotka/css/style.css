@@ -9,11 +9,13 @@ body {
 }
 
 label {
-	display: inline-block;
-	width: 20%;
-	background: #fff;
-	padding: 10px 15px;
-	border: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 20%;
+    background: #fff;
+    padding: 10px 15px;
+    border: 1px solid #bbb;
 }
 
 .check-box {
@@ -24,17 +26,12 @@ label {
 	clip: rect(0 0 0 0);
 }
 .check-style {
-	display: inline-block;
-	float: right;
 	padding: 2px;
-	width: 40px;
-	height: 20px;
+	width: 44px;
+	height: 24px;
 	border-radius: 13px;
-	vertical-align: middle;
-	transition: 0.25s 0.09s;
 	position: relative;
 	background: #d8d9db;
-	box-sizing: initial;
 }
 .check-style:after {
 	content: " ";
@@ -43,8 +40,6 @@ label {
 	height: 20px;
 	border-radius: 50%;
 	background: #fff;
-	position: absolute;
-	left: 2px;
 	transition: 0.25s;
 }
 .check-box:checked + .check-style {
@@ -52,5 +47,9 @@ label {
 }
 .check-box:checked + .check-style:after {
 	transform: translateX(20px);
+}
+
+.check-box:focus + .check-style {
+	box-shadow: 0 0 0 2px rgb(128, 123, 123);
 }
 
