@@ -48,3 +48,7 @@ label {
 .check-box:disabled:checked + .check-style::before {
 	background-color: #cccccc;
 }
+
+.check-box:focus + .check-style {
+	box-shadow: 0 0 0 2px #000;
+}
